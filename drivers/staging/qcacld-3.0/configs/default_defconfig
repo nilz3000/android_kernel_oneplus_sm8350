@@ -250,9 +250,10 @@ endif
 	CONFIG_WLAN_DUMP_IN_PROGRESS := y
 endif
 
-CONFIG_WLAN_POWER_DEBUG := y
-#Enable Beacon Reception Stats
-CONFIG_FEATURE_BECN_STATS := y
+CONFIG_WLAN_POWER_DEBUG := n
+
+#Disable Beacon Reception Stats
+CONFIG_FEATURE_BECN_STATS := n
 endif
 
 #Disable the Export Symbol config
