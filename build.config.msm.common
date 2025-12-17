@@ -1,15 +1,26 @@
 ################################################################################
 ## DTB general support
 DTB_DIR=vendor/qcom
+DTB_DIR_OPLUS=arch/${ARCH}/boot/dts/vendor/oplus/lemonadev
 
 function clean_dtbs() {
 	rm -rf ${OUT_DIR}/arch/${ARCH}/boot/dts
 }
 append_cmd POST_DEFCONFIG_CMDS 'clean_dtbs'
 
+# arch/${ARCH}/boot/dts/${DTB_DIR}/*.dtb*
+
 FILES+="
-arch/${ARCH}/boot/dts/${DTB_DIR}/*.dtb*
+arch/arm64/boot/dts/vendor/oplus/lemonadev/lahaina.dtb
+arch/arm64/boot/dts/vendor/oplus/lemonadev/lahaina-v2.1.dtb
+arch/arm64/boot/dts/vendor/oplus/lemonadev/lahaina-v2.dtb
+arch/arm64/boot/dts/vendor/oplus/lemonadev/lemonade-19825-overlay.dtbo
+arch/arm64/boot/dts/vendor/oplus/lemonadev/lemonadep-19815-overlay.dtbo
+arch/arm64/boot/dts/vendor/oplus/lemonadev/lemonadep-19815-overlay-t0.dtbo
+arch/arm64/boot/dts/vendor/oplus/lemonadev/lemonadev-2080a-overlay.dtbo
 "
+
+export TARGET_BUILD_VARIANT=user
 
 ################################################################################
 ## DT Overlay

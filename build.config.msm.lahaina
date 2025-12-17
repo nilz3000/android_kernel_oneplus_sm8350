@@ -1,9 +1,9 @@
 ################################################################################
 ## Defaulting required variables
-[ -z "${VARIANT}" ] && VARIANT=default
+[ -z "${VARIANT}" ] && VARIANT=qgki
 [ -z "${CONFIG_TARGET}" ] && CONFIG_TARGET=msm.lahaina
 
-[ -z "${KERNEL_DIR}" ] && KERNEL_DIR=kernel
+[ -z "${KERNEL_DIR}" ] && KERNEL_DIR=common
 
 ################################################################################
 ## Inheriting configs from ACK
